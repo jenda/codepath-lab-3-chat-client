@@ -44,11 +44,9 @@
         android:textSize="18sp"
         android:id="@+id/tvBody"
         android:padding="20dp"
-        android:lines="1"
         android:ellipsize="end"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-
+        android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/ivProfileOther"
         android:layout_toLeftOf="@+id/ivProfileMe">
     </TextView>
