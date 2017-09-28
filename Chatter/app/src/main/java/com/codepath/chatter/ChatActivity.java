@@ -71,7 +71,6 @@ public class ChatActivity extends AppCompatActivity {
         } else { // If not logged in, login as a new anonymous user
             login();
         }
-//        myHandler.postDelayed(mRefreshMessagesRunnable, POLL_INTERVAL);
 
         ParseLiveQueryClient parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient();
 
@@ -114,6 +113,8 @@ public class ChatActivity extends AppCompatActivity {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ChatActivity.this);
         linearLayoutManager.setReverseLayout(true);
         rvChat.setLayoutManager(linearLayoutManager);
+
+        refreshMessages();
     }
 
     void refreshMessages() {
