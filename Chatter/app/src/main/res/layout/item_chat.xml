@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal" >-->
+    <!--<ImageView-->
+        <!--android:id="@+id/ivProfileOther"-->
+        <!--android:contentDescription="@string/profile_other"-->
+        <!--android:layout_width="64dp"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:src="@mipmap/ic_launcher"-->
+        <!--android:layout_gravity="left"/>-->
+    <!--<TextView-->
+        <!--android:textSize="18sp"-->
+        <!--android:id="@+id/tvBody"-->
+        <!--android:padding="20dp"-->
+        <!--android:lines="1"-->
+        <!--android:ellipsize="end"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:layout_gravity="center">-->
+    <!--</TextView>-->
+    <!--<ImageView-->
+        <!--android:id="@+id/ivProfileMe"-->
+        <!--android:contentDescription="@string/profile_me"-->
+        <!--android:layout_width="64dp"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:src="@mipmap/ic_launcher"-->
+        <!--android:layout_gravity="right"/>-->
+<!--</FrameLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal" >
@@ -9,24 +39,24 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@mipmap/ic_launcher"
-
-        android:layout_gravity="left"/>
+        android:layout_alignParentLeft="true" />
     <TextView
         android:textSize="18sp"
         android:id="@+id/tvBody"
         android:padding="20dp"
         android:lines="1"
         android:ellipsize="end"
-        android:layout_marginEnd="64dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:layout_gravity="center">
+
+        android:layout_toRightOf="@+id/ivProfileOther"
+        android:layout_toLeftOf="@+id/ivProfileMe">
     </TextView>
     <ImageView
         android:id="@+id/ivProfileMe"
         android:contentDescription="@string/profile_me"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="right"/>
-</FrameLayout>
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher" />
+</RelativeLayout>
